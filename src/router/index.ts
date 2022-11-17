@@ -20,7 +20,7 @@ const routes: Array<RouteRecordRaw> = [
           requireAuth: true
       },
       component: () => import('@/pages/index.vue')
-  }
+  },
 ]
 
 const router = createRouter({
