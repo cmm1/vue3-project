@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-
+import { useUserStore } from '@/store/user'
 defineProps<{ msg: string }>()
-
 const count = ref(0)
+ const userStore = useUserStore()
+ userStore.updateName('李四')
 </script>
 
 <template>
@@ -29,6 +30,7 @@ const count = ref(0)
     in your IDE for a better DX
   </p>
   <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
+  <p>{{ userStore.name }}</p>
 </template>
 
 <style scoped>
