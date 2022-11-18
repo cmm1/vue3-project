@@ -18,13 +18,18 @@ export default defineConfig({
             port: 5173
         },
         // 设置 https 代理
-        // proxy: {
-        //     '/api': {
-        //         target: 'your https address',
-        //         changeOrigin: true,
-        //         rewrite: (path: string) => path.replace(/^\/api/, '')
-        //     }
-        // }
+        proxy: {
+            '/api': {
+                target: 'your https address',
+                changeOrigin: true,
+                rewrite: (path: string) => path.replace(/^\/api/, '')
+            },
+            '/url': {
+                target: 'your https address',
+                changeOrigin: true,
+                rewrite: (path: string) => path.replace(/^\/url/, '')
+            }
+        }
     }
 });
 
