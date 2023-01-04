@@ -19,19 +19,19 @@
 //     age: 10
 // }
 
-// function add(x: number, y: number, z?: number): number {
-//     if (typeof z === 'number') {
-//         return x + y + z;
-//     }
-//     return x + y;
-// }
-// add(0, 3, 1)
+function add(x: number, y: number, z?: number): number {
+    if (typeof z === 'number') {
+        return x + y + z;
+    }
+    return x + y;
+}
+add(0, 3, 1)
 
-// const add1 = (x: number, y: number, z?: number): number => {
-//     if (typeof z === 'number') {
-//         return x + y + z;
-//     }
-//     return x + y;
-// }
+const add1 = (x: number, y: number, z?: number): number => {
+    if (typeof z === 'number') {
+        return x + y + z;
+    }
+    return x + y;
+}
 
-// add1(0, 3, 1)
+add1(0, 3, 1)
