@@ -20,15 +20,16 @@ export default defineConfig({
         // 设置 https 代理
         proxy: {
             '/api': {
-                target: 'your https address',
+                target: 'http://127.0.0.1:8099',
                 changeOrigin: true,
+                secure: false, // 请求是否为https
                 rewrite: (path: string) => path.replace(/^\/api/, '')
-            },
-            '/url': {
-                target: 'your https address',
-                changeOrigin: true,
-                rewrite: (path: string) => path.replace(/^\/url/, '')
             }
+            // '/url': {
+            //     target: 'your https address',
+            //     changeOrigin: true,
+            //     rewrite: (path: string) => path.replace(/^\/url/, '')
+            // }
         }
     }
 });
