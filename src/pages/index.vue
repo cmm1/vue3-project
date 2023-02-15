@@ -74,6 +74,5 @@ export default {
   mounted() {
     //this.getPageList();
   },
-
 }
 </script>
